@@ -1,0 +1,25 @@
+
+// [ HEADINGS ]
+h1 {
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: var(--m-small);
+    font-weight: $f-normal;
+    
+    &.has-subheading { margin-bottom: 0 }
+}
+h2 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: var(--m-tiny);
+    font-weight: $f-normal;
+
+    &.has-subheading { margin-bottom: var(--m-small); }
+}
+
+// [ BODY TEXT ]
+p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: $f-normal;
+}

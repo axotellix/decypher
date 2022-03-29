@@ -1,0 +1,18 @@
+
+// [ COMPONENT: modal ]
+.modal {
+    background: rgba(0, 5, 15, 0.7);
+    z-index: 9999;
+    @include flex-align;
+    @include stretch(fixed);
+
+    &[open = 'false'] {
+        display: none;
+    }
+}
+
+.modal-content {
+    padding: 50px;
+    background: $d-white;
+    border-radius: 10px;
+}
