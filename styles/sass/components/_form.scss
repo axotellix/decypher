@@ -1,0 +1,110 @@
+
+// [ COMPONENT: FORM ]
+form.center {
+    width: 400px; height: 400px;
+    @include align(center, center, fixed);
+
+    input {
+        width: 400px;
+    }
+    input.pass {
+        letter-spacing: 10px;
+    }
+}
+form.medium {
+    width: 600px;
+    @include align(center, center, fixed);
+}
+
+form textarea {
+    padding: 20px !important;
+    width: 600px !important; height: 300px !important;
+    resize: none;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    @include flex-align;
+
+    &.separator {
+        padding-bottom: 20px;
+        border-bottom: 1px solid $line;
+    }
+}
+
+form [inactive = 'true'] {
+    opacity: 0.5;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+form input, form textarea, form select {
+    flex-grow: 1; min-width: 300px; height: 50px;
+    background: lighten($grey, 10%);
+    border-radius: 5px;
+    border: none; outline: none;
+    padding: 0 20px;
+    font-size: 1.6rem;
+    color: $d-white;
+    transition: all 0.25s;
+
+    &:focus {
+        background: lighten($grey, 4%);
+    }
+
+    &::-webkit-input-placeholder {
+        color: darken($d-white, 5%);
+    }
+    
+}
+button {
+    height: 50px;
+    @extend .CTA;
+    @include flex-align;
+}
+
+.comments-sort {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    gap: 10px;
+    font-size: 1.4rem;
+    color: lighten($grey, 10%);
+    @include flex-align(flex-end);
+
+    div {
+        gap: 10px;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: all 0.25s;
+        @include flex-align;
+
+        &:hover {
+            color: lighten($grey, 4%);
+
+            .ico {
+                fill: darken($purple, 10%);
+                stroke: darken($purple, 10%);
+            }
+        }
+    }
+
+    .ico {
+        width: 22px; height: 22px;
+        fill: darken($purple, 10%);
+        stroke: darken($purple, 10%);
+        fill: $d-grey;
+        stroke: $d-grey;
+        stroke-width: 0.5px;
+        cursor: pointer;
+        transition: all 0.25s;
+
+        &.desc {
+            transform: rotate(-180deg);
+        }
+    }
+}
